@@ -1,9 +1,9 @@
 // Place any global data in this file.
 // You can import this data from anywhere in your site by using the `import` keyword.
 
-export const SITE_TITLE = "Mainline - Modern Astro Template";
+export const SITE_TITLE = "Grupo Colors";
 export const SITE_DESCRIPTION =
-  "A modern, fully featured Astro template built with Shadcn/UI, TailwindCSS and TypeScript, perfect for your next web application.";
+  "Empesa con más de 20 años de experiencia en el mercado de equipos oftalmológicos y optométricos.";
 
 export const GITHUB_URL =
   "https://github.com/shadcnblocks/mainline-astro-template";

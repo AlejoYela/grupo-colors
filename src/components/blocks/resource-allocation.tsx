@@ -4,9 +4,9 @@ import { cn } from "@/lib/utils";
 
 const topItems = [
   {
-    title: "Reusable issue templates.",
+    title: "Servicio técnico confiable.",
     description:
-      "Draft lightning-fast documents with our Smart Instructions and Templates.",
+      "Ingenieros especializados, certificados con entrenamiento directo de fabricantes.",
     images: [
       {
         src: "/resource-allocation/templates.webp",
@@ -20,37 +20,37 @@ const topItems = [
     fade: [""],
   },
   {
-    title: "Simplify your stack.",
-    description: "No more Confluence, SharePoint, or Microsoft Word.",
+    title: "Confían en Grupo Colors.",
+    description: "Instituciones de salud visual líderes en Colombia nos eligen.",
     images: [
-      { src: "/logos/jira.svg", alt: "Jira logo", width: 48, height: 48 },
-      { src: "/logos/excel.svg", alt: "Excel logo", width: 48, height: 48 },
+      { src: "/logos/compensar.svg", alt: "Compensar logo", width: 48, height: 48 },
+      { src: "/logos/keralty.svg", alt: "Keralty logo", width: 48, height: 48 },
       {
-        src: "/logos/notion.svg",
-        alt: "Notion logo",
+        src: "/logos/sura.svg",
+        alt: "Sura logo",
         width: 48,
         height: 48,
       },
-      { src: "/logos/word.svg", alt: "Word logo", width: 48, height: 48 },
+      { src: "/logos/sandiego.svg", alt: "Clinica San Diego logo", width: 48, height: 48 },
       {
-        src: "/logos/monday.svg",
-        alt: "Monday logo",
-        width: 48,
-        height: 48,
-      },
-      {
-        src: "/logos/drive.svg",
-        alt: "Google Drive logo",
+        src: "/logos/santafe.svg",
+        alt: "Fundación Santa Fé logo",
         width: 48,
         height: 48,
       },
       {
-        src: "/logos/jira.svg",
-        alt: "Jira logo",
+        src: "/logos/ebenezer.svg",
+        alt: "Google Ebenezer logo",
         width: 48,
         height: 48,
       },
-      { src: "/logos/asana.svg", alt: "Asana logo", width: 48, height: 48 },
+      {
+        src: "/logos/quindio.svg",
+        alt: "Clinica Oftalmologica Quindio logo",
+        width: 48,
+        height: 48,
+      },
+      { src: "/logos/lasalle.svg", alt: "Universidad La Salle logo", width: 48, height: 48 },
     ],
     className:
       "flex-1 [&>.title-container]:mb-5 md:[&>.title-container]:mb-8 md:[&>.title-container]:translate-x-2 xl:[&>.title-container]:translate-x-4 [&>.title-container]:translate-x-0",
@@ -117,7 +117,7 @@ export const ResourceAllocation = () => {
     >
       <div className="">
         <h2 className="container text-center text-3xl tracking-tight text-balance sm:text-4xl md:text-5xl lg:text-6xl">
-          Mainline your resource allocation and execution
+          ¿Porqué elegirnos?
         </h2>
 
         <div className="mt-8 md:mt-12 lg:mt-20">
@@ -198,7 +198,7 @@ const Item = ({ item, isLast, className }: ItemProps) => {
                     height={image.height}
                     className="object-contain object-left-top"
                   />
-                  <div className="from-muted/80 absolute inset-y-0 right-0 z-10 w-16 bg-linear-to-l to-transparent" />
+                  <div className="from-black absolute inset-y-0 right-0 z-10 w-16 bg-linear-to-l to-transparent" />
                 </div>
               ))}
             </div>
@@ -216,7 +216,7 @@ const Item = ({ item, isLast, className }: ItemProps) => {
                     height={image.height}
                     className="object-contain object-left-top"
                   />
-                  <div className="from-muted absolute inset-y-0 bottom-0 left-0 z-10 w-14 bg-linear-to-r to-transparent" />
+                  <div className="from-black absolute inset-y-0 bottom-0 left-0 z-10 w-14 bg-linear-to-r to-transparent" />
                 </div>
               ))}
             </div>

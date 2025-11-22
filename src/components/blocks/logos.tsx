@@ -13,70 +13,70 @@ type Company = {
 export const Logos = () => {
   const topRowCompanies = [
     {
-      name: "Mercury",
-      logo: "/logos/mercury.svg",
+      name: "Visionix",
+      logo: "/logos/visionix.svg",
       width: 143,
       height: 26,
-      href: "https://mercury.com",
+      href: "https://visionix.com",
     },
     {
-      name: "Watershed",
-      logo: "/logos/watershed.svg",
+      name: "Optopol",
+      logo: "/logos/optopol.svg",
       width: 154,
       height: 31,
-      href: "https://watershed.com",
+      href: "https://optopol.com",
     },
     {
-      name: "Retool",
-      logo: "/logos/retool.svg",
+      name: "MicroClear",
+      logo: "/logos/microclear.svg",
       width: 113,
       height: 22,
-      href: "https://retool.com",
+      href: "https://www.microcleartech.net/",
     },
     {
-      name: "Descript",
-      logo: "/logos/descript.svg",
+      name: "Lightmed",
+      logo: "/logos/lightmed.svg",
       width: 112,
       height: 27,
-      href: "https://descript.com",
+      href: "https://lightmed.com",
     },
   ];
 
   const bottomRowCompanies = [
     {
-      name: "Perplexity",
-      logo: "/logos/perplexity.svg",
+      name: "Volk",
+      logo: "/logos/volk.svg",
       width: 141,
       height: 32,
-      href: "https://perplexity.com",
+      href: "https://volk.com",
     },
     {
-      name: "Monzo",
-      logo: "/logos/monzo.svg",
+      name: "Keeler",
+      logo: "/logos/keeler.svg",
       width: 104,
       height: 18,
-      href: "https://monzo.com",
+      href: "https://www.keelerglobal.com/es/",
     },
     {
-      name: "Ramp",
-      logo: "/logos/ramp.svg",
+      name: "Sbm",
+      logo: "/logos/sbm.svg",
       width: 105,
       height: 28,
-      href: "https://ramp.com",
+      href: "https://www.sbmsistemi.com/en/",
     },
     {
-      name: "Raycast",
-      logo: "/logos/raycast.svg",
+      name: "Plenoptika",
+      logo: "/logos/plenoptika.svg",
       width: 128,
       height: 33,
-      href: "https://raycast.com",
+      href: "https://plenoptika.com",
     },
     {
-      name: "Arc",
-      logo: "/logos/arc.svg",
+      name: "Suoer",
+      logo: "/logos/suoer.svg",
       width: 90,
       height: 28,
-      href: "https://arc.com",
+      href: "http://suowei.com.cn/index/about/index?lang=en-us",
     },
   ];
 
@@ -85,10 +85,10 @@ export const Logos = () => {
       <div className="container space-y-10 lg:space-y-16">
         <div className="text-center">
           <h2 className="mb-4 text-xl text-balance md:text-2xl lg:text-3xl">
-            Powering the world's best product teams.
+            Visión sin límites, tecnología sin fronteras.
             <br className="max-md:hidden" />
             <span className="text-muted-foreground">
-              From next-gen startups to established enterprises.
+              Representamos a los líderes mundiales en oftalmología.
             </span>
           </h2>
         </div>
@@ -133,7 +133,7 @@ const LogoRow = ({ companies, gridClassName, direction }: LogoRowProps) => {
                 alt={`${company.name} logo`}
                 width={company.width}
                 height={company.height}
-                className="dark:opacity/100 object-contain opacity-50 transition-opacity hover:opacity-70 dark:invert"
+                className="object-contain opacity-50 transition-opacity hover:opacity-100 brightness-0 invert"
               />
             </a>
           ))}
@@ -148,14 +148,14 @@ const LogoRow = ({ companies, gridClassName, direction }: LogoRowProps) => {
               href={company.href}
               target="_blank"
               key={index}
-              className="mx-8 inline-block transition-opacity hover:opacity-70"
+              className="mx-8 inline-block transition-opacity hover:opacity-100 opacity-50"
             >
               <img
                 src={company.logo}
                 alt={`${company.name} logo`}
                 width={company.width}
                 height={company.height}
-                className="object-contain"
+                className="object-contain brightness-0 invert"
               />
             </a>
           ))}

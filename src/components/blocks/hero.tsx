@@ -1,9 +1,9 @@
 import {
   ArrowRight,
   Blend,
-  ChartNoAxesColumn,
-  CircleDot,
-  Diamond,
+  Cog,
+  Truck,
+  Shield
 } from "lucide-react";
 
 import { DashedLine } from "@/components/dashed-line";
@@ -12,45 +12,45 @@ import { GITHUB_URL } from "@/consts";
 
 const features = [
   {
-    title: "Tailored workflows",
-    description: "Track progress across custom issue flows for your team.",
-    icon: CircleDot,
+    title: "Envíos Nacionales",
+    description: "Hacemos envíos e instalación a cualquier parte del país.",
+    icon: Truck,
   },
   {
-    title: "Cross-team projects",
-    description: "Collaborate across teams and departments.",
+    title: "Garantía Extendida",
+    description: "1 o 2 años (Segun aplique) directamente con la fabrica.",
     icon: Blend,
   },
   {
-    title: "Milestones",
-    description: "Break projects down into concrete phases.",
-    icon: Diamond,
+    title: "Confianza y Seguridad",
+    description: "Representantes oficiales de las mejores marcas.",
+    icon: Shield,
   },
   {
-    title: "Progress insights",
-    description: "Track scope, velocity, and progress over time.",
-    icon: ChartNoAxesColumn,
+    title: "Servicio técnico especializado",
+    description: "Ingenieros con entrenamiento de fábrica.",
+    icon: Cog,
   },
 ];
 
 export const Hero = () => {
   return (
-    <section className="py-28 lg:py-32 lg:pt-44">
+    <section className="pt-28 pb-10 lg:py-20 lg:pt-44">
       <div className="container flex flex-col justify-between gap-8 md:gap-14 lg:flex-row lg:gap-20">
         {/* Left side - Main content */}
         <div className="flex-1">
+          <img src="/logo-w.svg" alt="" className="hidden lg:block h-12 mb-10" />
           <h1 className="text-foreground max-w-160 text-3xl tracking-tight md:text-4xl lg:text-5xl xl:whitespace-nowrap">
-            Mainline Astro template
+            Tu visión, nuestra misión
           </h1>
 
-          <p className="text-muted-foreground text-1xl mt-5 md:text-3xl">
-            Mainline is an open-source website template built with shadcn/ui,
-            Tailwind 4 & Astro 5
+          <p className="text-muted-foreground text-1xl mt-5 md:text-2xl">
+            Más de <span className="text-sky-300">20 años</span> respaldando la salud visual, equipos de calidad y servicio excepcional.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-4 lg:flex-nowrap">
             <Button asChild>
-              <a href={GITHUB_URL}>Get template</a>
+              <a href={GITHUB_URL}>Catálogos completos</a>
             </Button>
             <Button
               variant="outline"
@@ -61,7 +61,8 @@ export const Hero = () => {
                 href="https://shadcnblocks.com"
                 className="max-w-56 truncate text-start md:max-w-none"
               >
-                Built by shadcnblocks.com
+                Solicita una cotización
+
                 <ArrowRight className="stroke-3" />
               </a>
             </Button>
@@ -97,13 +98,21 @@ export const Hero = () => {
         </div>
       </div>
 
-      <div className="mt-12 max-lg:ml-6 max-lg:h-[550px] max-lg:overflow-hidden md:mt-20 lg:container lg:mt-24">
-        <div className="relative h-[793px] w-full">
-          <img
-            src="/hero.webp"
-            alt="hero"
-            className="w-full rounded-2xl object-cover object-left-top shadow-lg max-lg:rounded-tr-none"
+      <div className="mt-12 md:mt-20 lg:mt-24 w-screen relative left-[50%] right-[50%] ml-[-50vw] mr-[-50vw]">
+        <div className="relative h-[480px] w-screen overflow-hidden left-[50%] right-[50%] ml-[-50vw] mr-[-50vw]">
+          <video
+            src="/video-eye-3.mp4"
+            className="w-full h-full object-cover max-lg:rounded-tr-none shadow-lg"
+            style={{
+              objectPosition: 'center 30%',
+              maskImage: 'linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%)',
+              WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%)'
+            }}
+            autoPlay
+            muted
+            loop
           />
+          {/* Ya no es necesario el overlay */}
         </div>
       </div>
     </section>

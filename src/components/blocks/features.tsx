@@ -6,16 +6,16 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const items = [
   {
-    title: "Purpose-built for product development",
-    image: "/features/triage-card.svg",
+    title: "Servicio enfocado en el cliente",
+    image: "/features/2.svg",
   },
   {
-    title: "Manage projects end-to-end",
-    image: "/features/cycle-card.svg",
+    title: "Acompañamiento completo",
+    image: "/features/3.svg",
   },
   {
-    title: "Build momentum and healthy habits",
-    image: "/features/overview-card.svg",
+    title: "Tiempos competitivos sin sacrificar calidad",
+    image: "/features/4.svg",
   },
 ];
 
@@ -27,19 +27,17 @@ export const Features = () => {
         <div className="relative flex items-center justify-center">
           <DashedLine className="text-muted-foreground" />
           <span className="bg-muted text-muted-foreground absolute px-3 font-mono text-sm font-medium tracking-wide max-md:hidden">
-            MEASURE TWICE. CUT ONCE.
+            VE CLARO. ACTÚA SEGURO.
           </span>
         </div>
 
         {/* Content */}
         <div className="mx-auto mt-10 grid max-w-4xl items-center gap-3 md:gap-0 lg:mt-24 lg:grid-cols-2">
           <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
-            Made for modern product teams
+            Hecho por y para profesionales de la salud visual
           </h2>
           <p className="text-muted-foreground leading-snug">
-            Mainline is built on the habits that make the best product teams
-            successful: staying focused, moving quickly, and always aiming for
-            high-quality work.
+            Somos expertos en lo que hacemos: entendemos tu negocio, llevamos más de dos décadas acompañando profesionales en cada paso del camino.
           </p>
         </div>
 

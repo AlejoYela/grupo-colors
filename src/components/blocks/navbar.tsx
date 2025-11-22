@@ -33,10 +33,10 @@ const ITEMS = [
       },
     ],
   },
-  { label: "About Us", href: "/about" },
-  { label: "Pricing", href: "/pricing" },
-  { label: "FAQ", href: "/faq" },
-  { label: "Contact", href: "/contact" },
+  { label: "Sobre nosotros", href: "/about" },
+  { label: "Productos", href: "/pricing" },
+  { label: "Preguntas", href: "/faq" },
+  { label: "Contacto", href: "/contact" },
 ];
 
 export const Navbar = () => {
@@ -55,14 +55,14 @@ export const Navbar = () => {
         "top-5 lg:top-12",
       )}
     >
-      <div className="flex items-center justify-between px-6 py-3">
+      <div className="flex items-center justify-between px-6 py-3 ">
         <a href="/" className="flex shrink-0 items-center gap-2">
           <img
             src="/logo.svg"
             alt="logo"
             width={94}
             height={18}
-            className="dark:invert"
+            className="lg:hidden"
           />
         </a>
 
@@ -119,15 +119,8 @@ export const Navbar = () => {
           <ThemeToggle />
           <a href="/login" className="max-lg:hidden">
             <Button variant="outline">
-              <span className="relative z-10">Login</span>
+              <span className="relative z-10">Cotización</span>
             </Button>
-          </a>
-          <a
-            href={GITHUB_URL}
-            className="text-muted-foreground hover:text-foreground transition-colors"
-          >
-            <Github className="size-4" />
-            <span className="sr-only">GitHub</span>
           </a>
 
           {/* Hamburger Menu Button (Mobile Only) */}

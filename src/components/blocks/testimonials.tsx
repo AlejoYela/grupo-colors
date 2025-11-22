@@ -15,60 +15,60 @@ import { cn } from "@/lib/utils";
 
 const items = [
   {
-    quote: "We're misusing Mainline as a CRM and it still works!",
-    author: "Amy Chase",
+    quote: "VX90, ARk con sistema de autofog y retroiluminación.",
+    author: "Autorefractoqueratómetro",
     role: "PM",
-    company: "Mercury Finance",
+    company: "Visionix",
     image: "/testimonials/amy-chase.webp",
   },
   {
-    quote: "I was able to replace 80% of my team with Mainline bots.",
-    author: "Jonas Kotara",
+    quote: "VX650, Screening integral de polo anterior y posterior.",
+    author: "Multidiagnostico",
     role: "Lead Engineer",
-    company: "Mercury Finance",
+    company: "Visionix",
     image: "/testimonials/jonas-kotara.webp",
   },
   {
-    quote: "Founder Mode is hard enough without having a really nice PM app.",
-    author: "Kevin Yam",
+    quote: "REVO 130FC, Escaneo ultrarrápido de 130,000 A-scans por segundo.",
+    author: "OCT + Fundus camera",
     role: "Founder",
-    company: "Mercury Finance",
+    company: "Optopol",
     image: "/testimonials/kevin-yam.webp",
   },
   {
-    quote: "I can use the tool as a substitute from my PM.",
-    author: "Kundo Marta",
+    quote: "QuickSee free, mediciones precisas en 10 segundos.",
+    author: "Autorefractómetro portátil",
     role: "Founder",
-    company: "Mercury Finance",
+    company: "PlenOptika",
     image: "/testimonials/kundo-marta.webp",
   },
   {
-    quote: "We're misusing Mainline as a CRM and it still works!",
-    author: "Amy Chase",
+    quote: "Keeler student, cinco haces de diagnóstico en formato compacto.",
+    author: "Estuche multidiagnóstico portátil",
     role: "PM",
-    company: "Mercury Finance",
-    image: "/testimonials/amy-chase.webp",
+    company: "Keeler",
+    image: "/testimonials/keeler.webp",
   },
   {
-    quote: "I was able to replace 80% of my team with Mainline bots.",
-    author: "Jonas Kotara",
+    quote: "Apollo CRO, Imaging confocal 165° en captura única.",
+    author: "Cámara de fondo de ojo.",
     role: "Lead Engineer",
-    company: "Mercury Finance",
-    image: "/testimonials/jonas-kotara.webp",
+    company: "MicroClear",
+    image: "/testimonials/apollo.webp",
   },
   {
-    quote: "Founder Mode is hard enough without having a really nice PM app.",
-    author: "Kevin Yam",
+    quote: "IDRA, Evaluación estructural de composición lagrimal",
+    author: "Analizador de ojo seco",
     role: "Founder",
-    company: "Mercury Finance",
-    image: "/testimonials/kevin-yam.webp",
+    company: "SMB",
+    image: "/testimonials/idra.webp",
   },
   {
-    quote: "I can use the tool as a substitute from my PM.",
-    author: "Kundo Marta",
+    quote: "Weco E32: Trazado, bloqueo, canteado y perforación.",
+    author: "Biseladora de lentes",
     role: "Founder",
-    company: "Mercury Finance",
-    image: "/testimonials/kundo-marta.webp",
+    company: "Visionix",
+    image: "/testimonials/e32.webp",
   },
 ];
 
@@ -85,15 +85,15 @@ export const Testimonials = ({
         <div className="container">
           <div className="space-y-4">
             <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
-              Trusted by product builders
+              Nuestros productos estrella
             </h2>
-            <p className="text-muted-foreground max-w-md leading-snug">
+            <p className="text-gray-300 max-w-md leading-snug">
               Mainline is built on the habits that make the best product teams
               successful: staying focused, moving quickly, and always aiming for
               high-quality work.
             </p>
             <Button variant="outline" className="shadow-md">
-              Read our Customer Stories <ArrowRight className="size-4" />
+              Contacta con nuestro equipo comercial <ArrowRight className="size-4" />
             </Button>
           </div>
 
@@ -126,7 +126,7 @@ export const Testimonials = ({
                           </blockquote>
                           <div className="space-y-0.5">
                             <div className="text-foreground font-semibold">
-                              {testimonial.author}, {testimonial.role}
+                              {testimonial.author}
                             </div>
                             <div className="text-muted-foreground text-sm">
                               {testimonial.company}
