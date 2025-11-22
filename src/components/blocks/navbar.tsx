@@ -33,7 +33,7 @@ const ITEMS = [
       },
     ],
   },
-  { label: "Sobre nosotros", href: "/about" },
+  { label: "Nosotros", href: "/about" },
   { label: "Productos", href: "/pricing" },
   { label: "Preguntas", href: "/faq" },
   { label: "Contacto", href: "/contact" },
@@ -58,11 +58,11 @@ export const Navbar = () => {
       <div className="flex items-center justify-between px-6 py-3 ">
         <a href="/" className="flex shrink-0 items-center gap-2">
           <img
-            src="/logo.svg"
+            src="/logo-w.svg"
             alt="logo"
             width={94}
             height={18}
-            className="lg:hidden"
+            className=""
           />
         </a>
 
@@ -116,7 +116,7 @@ export const Navbar = () => {
 
         {/* Auth Buttons */}
         <div className="flex items-center gap-2.5">
-          <ThemeToggle />
+
           <a href="/login" className="max-lg:hidden">
             <Button variant="outline">
               <span className="relative z-10">Cotización</span>

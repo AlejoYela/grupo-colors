@@ -8,52 +8,52 @@ import { cn } from "@/lib/utils";
 
 const categories = [
   {
-    title: "Support",
+    title: "Sobre nuestros equipos",
     questions: [
       {
-        question: "How do I update my account without breaking my laptop?",
+        question: "¿Qué marcas internacionales representan?",
         answer:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.",
+          "Representamos marcas de prestigio como Visionix, Optopol, PlenOptika, Keeler y Microclear, cada una especializada en diferentes áreas de diagnóstico y soluciones visuales.",
       },
       {
-        question: "Is support free, or do I need to Google everything?",
+        question: "¿Qué equipos recomiendan para consultorios nuevos?",
         answer:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.",
-      },
-      {
-        question: "Are you going to be subsumed by AI?",
-        answer:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.",
+          "Autorefractómetros portátiles, equipos de diagnóstico básicos y oftalmoscopios indirectos. Nuestro equipo de asesoría te ayuda a elegir según tu especialidad.",
       },
     ],
   },
   {
-    title: "Your account",
+    title: "Servicio técnico y garantía",
     questions: [
       {
-        question: "Is support free, or do I need to Google everything?",
+        question: "¿Cuánto tiempo dura la garantía?",
         answer:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.",
+          "1-2 años según el equipo, directamente con el fabricante. Tu inversión está protegida con acceso a servicio especializado sin intermediarios.",
       },
       {
-        question: "Are you going to be subsumed by AI?",
+        question: "¿Hacen envíos e instalación a todo el país?",
         answer:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.",
+          "Sí, realizamos envío, instalación profesional y capacitación en tu consultorio, donde sea que estés ubicado en Colombia.",
       },
     ],
   },
   {
-    title: "Other questions",
+    title: "Asesoría",
     questions: [
       {
-        question: "Is support free, or do I need to Google everything?",
+        question: "¿Puedo recibir asesoría antes de comprar?",
         answer:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.",
+          "Sí, nuestro equipo ofrece consultoría sin costo. Analizamos tu necesidad y recomendamos la solución ideal para tu práctica.",
       },
       {
-        question: "Are you going to be subsumed by AI?",
+        question: "¿Cómo contactarlos?",
         answer:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.",
+          "Bogotá: Carrera 25 No 70-34, Barrio Alcázares. Teléfono +57 317 3707682, PBX 7447776 ext 101.",
+      },
+      {
+        question: "¿Cómo contactarlos o visitarlos?",
+        answer:
+          "Bogotá: Carrera 25 No 70-34, Barrio Alcázares. Puedes visitarnos, llamar al +57 317 3707682 o PBX 7447776 ext 101. ¡Te esperamos!",
       },
     ],
   },
@@ -75,17 +75,17 @@ export const FAQ = ({
           <div className="space-y-4">
             {headerTag === "h1" ? (
               <h1 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
-                Got Questions?
+                ¿Tienes Preguntas?
               </h1>
             ) : (
               <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
-                Got Questions?
+                ¿Tienes Preguntas?
               </h2>
             )}
             <p className="text-muted-foreground max-w-md leading-snug lg:mx-auto">
-              If you can't find what you're looking for,{" "}
+              Si no encuentras lo que estás buscando, {" "}
               <a href="/contact" className="underline underline-offset-4">
-                get in touch
+                contáctanos
               </a>
               .
             </p>

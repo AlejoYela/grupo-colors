@@ -34,10 +34,10 @@ export const Features = () => {
         {/* Content */}
         <div className="mx-auto mt-10 grid max-w-4xl items-center gap-3 md:gap-0 lg:mt-24 lg:grid-cols-2">
           <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
-            Hecho por y para profesionales de la salud visual
+            Diseñado por y para profesionales de la salud visual
           </h2>
           <p className="text-muted-foreground leading-snug">
-            Somos expertos en lo que hacemos: entendemos tu negocio, llevamos más de dos décadas acompañando profesionales en cada paso del camino.
+            Somos expertos en lo que hacemos: entendemos tu negocio porque llevamos más de dos décadas acompañando profesionales en cada paso del camino.
           </p>
         </div>
 

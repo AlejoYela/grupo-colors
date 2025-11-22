@@ -88,9 +88,7 @@ export const Testimonials = ({
               Nuestros productos estrella
             </h2>
             <p className="text-gray-300 max-w-md leading-snug">
-              Mainline is built on the habits that make the best product teams
-              successful: staying focused, moving quickly, and always aiming for
-              high-quality work.
+              Equipos con las mejores calificaciones de nuestros clientes. Elegidos por su exactitud diagnóstica, facilidad de uso y el impacto positivo en sus prácticas..
             </p>
             <Button variant="outline" className="shadow-md">
               Contacta con nuestro equipo comercial <ArrowRight className="size-4" />

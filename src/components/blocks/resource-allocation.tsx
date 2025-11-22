@@ -4,9 +4,9 @@ import { cn } from "@/lib/utils";
 
 const topItems = [
   {
-    title: "Servicio técnico confiable.",
+    title: "Garantía directa con fábrica.",
     description:
-      "Ingenieros especializados, certificados con entrenamiento directo de fabricantes.",
+      "Cobertura de 1-2 años según aplique, con respaldo directo del fabricante.",
     images: [
       {
         src: "/resource-allocation/templates.webp",
@@ -60,9 +60,9 @@ const topItems = [
 
 const bottomItems = [
   {
-    title: "Graveyard it.",
+    title: "Servicio técnico confiable.",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do.",
+      "Ingenieros especializados, certificados con entrenamiento directo de fabricantes.",
     images: [
       {
         src: "/resource-allocation/graveyard.webp",
@@ -76,9 +76,9 @@ const bottomItems = [
     fade: ["bottom"],
   },
   {
-    title: "Task discussions.",
+    title: "Expertos que capacitan expertos.",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod.",
+      "Asesoría técnica, comercial y académica especializada en cada paso.",
     images: [
       {
         src: "/resource-allocation/discussions.webp",
@@ -92,9 +92,9 @@ const bottomItems = [
     fade: [""],
   },
   {
-    title: "Notifications.",
+    title: "Escalamos contigo.",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod.",
+      "Soluciones ajustadas para clínicas nuevas, consultorios consolidados o centros oftalmológicos de alto volumen.",
     images: [
       {
         src: "/resource-allocation/notifications.webp",

@@ -44,8 +44,8 @@ export const Hero = () => {
             Tu visión, nuestra misión
           </h1>
 
-          <p className="text-muted-foreground text-1xl mt-5 md:text-2xl">
-            Más de <span className="text-sky-300">20 años</span> respaldando la salud visual, equipos de calidad y servicio excepcional.
+          <p className="text-gray-400 text-1xl mt-5 md:text-2xl">
+            Más de <span className="text-sky-300">20 años</span> respaldando la salud visual con equipos de calidad y soporte técnico especializado en todo el país.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-4 lg:flex-nowrap">
