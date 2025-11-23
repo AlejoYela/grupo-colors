@@ -8,8 +8,8 @@ export const AboutSection = () => {
       <div className="flex flex-col gap-8 lg:gap-16 xl:gap-20">
         <ImageSection
           images={[
-            { src: "/about/1.webp", alt: "Team collaboration" },
-            { src: "/about/2.webp", alt: "Team workspace" },
+            { src: "/about/5.webp", alt: "Team collaboration" },
+            { src: "/about/6.webp", alt: "Team workspace" },
           ]}
           className="xl:-translate-x-10"
         />
@@ -23,7 +23,7 @@ export const AboutSection = () => {
           ]}
           ctaButton={{
             href: "/careers",
-            text: "View open roles",
+            text: "Ver oportunidades de empleo",
           }}
         />
       </div>
@@ -32,14 +32,14 @@ export const AboutSection = () => {
       <div className="flex flex-col gap-8 lg:gap-16 xl:gap-20">
         <TextSection
           paragraphs={[
-            "At Mainline, we are dedicated to transforming the way teams plan, execute, and deliver projects. Our mission is to provide our customers with an unbeatable edge over delays, inefficiencies, and disorganisation through actionable insights and seamless collaboration. We'll stop at nothing to give you the tools you need to get every project across the finish line.",
-            "We're customer-obsessed — investing the time to understand every aspect of your workflow so that we can help you operate better than ever before. We're all in this together because your success is our success. In our history as a company, we've never lost a customer, because when your projects succeed, so do we.",
+            "Nuestra visión es consolidarnos como un referente en la distribución de soluciones para la salud visual en Colombia. Buscamos crecer con una cultura basada en valores, un servicio cercano y procesos sólidos que generen bienestar a nuestros clientes y a las personas que atendemos cada día. Queremos seguir construyendo una empresa eficiente, humana y comprometida con la calidad y la dignidad en cada servicio que ofrecemos.",
+            "Nuestra misión es aportar al bienestar de las personas mediante soluciones confiables para la salud visual. Trabajamos con un enfoque humano, valorando a cada cliente, proveedor y colaborador, y construyendo relaciones basadas en respeto y servicio. Nos guiamos por principios de honestidad, humildad y eficiencia, reflejando en cada proceso nuestro compromiso con la calidad y la dignidad de quienes confían en nosotros.",
           ]}
         />
         <ImageSection
           images={[
-            { src: "/about/3.webp", alt: "Modern workspace" },
-            { src: "/about/4.webp", alt: "Team collaboration" },
+            { src: "/about/9.webp", alt: "Modern workspace" },
+            { src: "/about/7.webp", alt: "Team collaboration" },
           ]}
           className="hidden lg:flex xl:translate-x-10"
         />

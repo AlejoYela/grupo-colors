@@ -2,22 +2,23 @@ import { DashedLine } from "@/components/dashed-line";
 
 const stats = [
   {
-    value: "$150M",
-    label: "Raised",
+    value: "+20 años",
+    label: "Trayectoria en el mercado",
   },
   {
-    value: "20K",
-    label: "Companies",
+    value: "+1.200",
+    label: "Instituciones atendidas",
   },
   {
-    value: "1.3B",
-    label: "Monthly transactions",
+    value: "+15.000",
+    label: "Capacitaciones realizadas",
   },
   {
-    value: "1.5K",
-    label: "Connections per minute",
+    value: "+8.000",
+    label: "Equipos inastalados",
   },
 ];
+
 
 export function AboutHero() {
   return (
@@ -33,20 +34,7 @@ export function AboutHero() {
           </p>
 
           <p className="text-muted-foreground mt-8 hidden max-w-lg space-y-6 text-lg text-balance md:block lg:mt-12">
-            At Mainline, we are dedicated to transforming the way teams plan,
-            execute, and deliver projects. Our mission is to provide our
-            customers with an unbeatable edge over delays, inefficiencies, and
-            disorganisation through actionable insights and seamless
-            collaboration. We’ll stop at nothing to give you the tools you need
-            to get every project across the finish line.
-            <br />
-            <br />
-            We’re customer-obsessed — investing the time to understand every
-            aspect of your workflow so that we can help you operate better than
-            ever before. We’re all in this together because your success is our
-            success. In our history as a company, we’ve never lost a customer,
-            because when your projects succeed, so do we.
-          </p>
+            Trabajamos para impulsar la forma en que los profesionales de la salud visual atienden, diagnostican y transforman la visión del país. Nuestra misión es ofrecer soluciones confiables, precisas y accesibles que den a nuestros clientes una ventaja real frente a los desafíos clínicos, operativos y tecnológicos modernos. No descansamos hasta asegurarnos de que cada práctica tenga el respaldo, el conocimiento y las herramientas necesarias para brindar una atención excepcional.          </p>
         </div>
 
         <div
