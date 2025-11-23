@@ -15,11 +15,11 @@ export const AboutSection = () => {
         />
 
         <TextSection
-          title="The team"
+          title="Grupo Colors"
           paragraphs={[
-            "We started building Mainline in 2019 and launched in 2022. Every endpoint has been designed from the ground up — with no technical debt or legacy systems. We are purpose-built to power project management innovation for the next hundred years.",
-            "We are 100% founder and team-owned, profitable, and we keep our team lean. Over time, this page will become more polished, but for now, we're focused on delivering for developers.",
-            "If you're interested in building the future of PM, check out our open roles below.",
+            "Fundado en 2001, Grupo Colors es líder en la distribución y comercialización de equipos oftalmológicos, optométricos y monturas en Colombia y Latinoamérica.",
+            "Durante más de dos décadas hemos acompañado a profesionales de la salud visual con soluciones tecnológicas, soporte especializado y un compromiso constante con la innovación.",
+            "Representamos marcas internacionales de prestigio y brindamos asesoría técnica, comercial y académica que impulsa el crecimiento de cada práctica profesional.",
           ]}
           ctaButton={{
             href: "/careers",

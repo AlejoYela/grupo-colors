@@ -17,24 +17,54 @@ import { cn } from "@/lib/utils";
 
 const ITEMS = [
   {
-    label: "Features",
+    label: "Servicios",
     href: "#features",
     dropdownItems: [
       {
-        title: "Modern product teams",
+        title: "Nuestro valor",
         href: "/#feature-modern-teams",
         description:
-          "Mainline is built on the habits that make the best product teams successful",
+          "Tres pilares que hacen la diferencia en tu práctica diaria.",
       },
       {
-        title: "Resource Allocation",
+        title: "¿Porqué elegirnos?",
         href: "/#resource-allocation",
-        description: "Mainline your resource allocation and execution",
+        description: "Garantía, experiencia y soporte que puedes confiar.",
+      },
+      {
+        title: "Productos estrella",
+        href: "/#stars-products",
+        description: "Equipos con las mejores calificaciones de nuestros clientes.",
       },
     ],
   },
   { label: "Nosotros", href: "/about" },
-  { label: "Productos", href: "/pricing" },
+  {
+    label: "Productos",
+    href: "/pricing",
+    dropdownItems: [
+      {
+        title: "Equipos de Oftalmología",
+        href: "/pricing",
+        description: "Multidiagnósticos, OCT, ARK, Cámaras retinales, Lámparas de hendidura, Dry eye, Láser...",
+      },
+      {
+        title: "Equipos de Optometría",
+        href: "/pricing",
+        description: "Forópter, Lensómetros, Sistemas de agudeza visual, Unidades de refracción, Cajas de pruebas...",
+      },
+      {
+        title: "Equipos de Laboratorio",
+        href: "/pricing",
+        description: "Biseladoras, Trazadoras, Calentadores de monturas, Uveómetros...",
+      },
+      {
+        title: "Monturas",
+        href: "/pricing",
+        description: "Frida Khalo, Paul Frank, Perry Ellis, New Balance, Nano, Lancetti...",
+      },
+    ]
+  },
   { label: "Preguntas", href: "/faq" },
   { label: "Contacto", href: "/contact" },
 ];

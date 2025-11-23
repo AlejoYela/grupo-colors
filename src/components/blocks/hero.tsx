@@ -40,6 +40,7 @@ export const Hero = () => {
         {/* Left side - Main content */}
         <div className="flex-1">
           <img src="/logo-w.svg" alt="" className="hidden lg:block h-12 mb-10" />
+
           <h1 className="text-foreground max-w-160 text-3xl tracking-tight md:text-4xl lg:text-5xl xl:whitespace-nowrap">
             Tu visión, nuestra misión
           </h1>
@@ -97,6 +98,7 @@ export const Hero = () => {
           })}
         </div>
       </div>
+
 
       <div className="mt-12 md:mt-20 lg:mt-24 w-screen relative left-[50%] right-[50%] ml-[-50vw] mr-[-50vw]">
         <div className="relative h-[480px] w-screen overflow-hidden left-[50%] right-[50%] ml-[-50vw] mr-[-50vw]">
