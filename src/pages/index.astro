@@ -10,12 +10,14 @@ import { Pricing } from '@/components/blocks/pricing';
 import { ResourceAllocation } from '@/components/blocks/resource-allocation';
 import { Testimonials } from '@/components/blocks/testimonials';
 import DefaultLayout from '@/layouts/DefaultLayout.astro';
+import Banner from '@/components/blocks/banner';
 
 
 
 ---
 
 <DefaultLayout title={SITE_TITLE} description={SITE_DESCRIPTION} >
+  <Banner />
   <Background className="via-gray-950 to-gray-950/80">
     <Hero />
     <Logos client:only="react"/> 
