@@ -1,90 +1,38 @@
 import { useState } from "react";
 
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronDown } from "lucide-react";
+
+import productsData from '../../data/products.json';
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import { cn } from "@/lib/utils";
 
-const items = [
-    {
-        quote: "VX90, ARk con sistema de autofog y retroiluminación.",
-        author: "Autorefractoqueratómetro",
-        role: "PM",
-        company: "Visionix",
-        category: "Refracción",
-        image: "/testimonials/amy-chase.webp",
-    },
-    {
-        quote: "VX650, Screening integral de polo anterior y posterior.",
-        author: "Multidiagnostico",
-        role: "Lead Engineer",
-        company: "Visionix",
-        category: "Diagnóstico",
-        image: "/testimonials/jonas-kotara.webp",
-    },
-    {
-        quote: "REVO 130FC, Escaneo ultrarrápido de 130,000 A-scans por segundo.",
-        author: "OCT + Fundus camera",
-        role: "Founder",
-        company: "Optopol",
-        category: "Imaging",
-        image: "/testimonials/kevin-yam.webp",
-    },
-    {
-        quote: "QuickSee free, mediciones precisas en 10 segundos.",
-        author: "Autorefractómetro portátil",
-        role: "Founder",
-        company: "PlenOptika",
-        category: "Refracción",
-        image: "/testimonials/kundo-marta.webp",
-    },
-    {
-        quote: "Keeler student, cinco haces de diagnóstico en formato compacto.",
-        author: "Estuche multidiagnóstico portátil",
-        role: "PM",
-        company: "Keeler",
-        category: "Diagnóstico",
-        image: "/testimonials/keeler.webp",
-    },
-    {
-        quote: "Apollo CRO, Imaging confocal 165° en captura única.",
-        author: "Cámara de fondo de ojo.",
-        role: "Lead Engineer",
-        company: "MicroClear",
-        category: "Imaging",
-        image: "/testimonials/apollo.webp",
-    },
-    {
-        quote: "IDRA, Evaluación estructural de composición lagrimal",
-        author: "Analizador de ojo seco",
-        role: "Founder",
-        company: "SMB",
-        category: "Diagnóstico",
-        image: "/testimonials/idra.webp",
-    },
-    {
-        quote: "Weco E32: Trazado, bloqueo, canteado y perforación.",
-        author: "Biseladora de lentes",
-        role: "Founder",
-        company: "Visionix",
-        category: "Laboratorio",
-        image: "/testimonials/e32.webp",
-    },
-];
 
-const categories = ["Todos", "Refracción", "Diagnóstico", "Imaging", "Laboratorio"];
+const items = productsData;
+
+const categories = ["Todas", "Refracción", "Diagnóstico", "Imaging", "Laboratorio"];
+const brands = ["Todas", "Visionix", "Optopol", "PlenOptika", "Keeler", "MicroClear", "SMB"];
 
 export const Devices = ({
     className,
 }: {
     className?: string;
 }) => {
-    const [selectedCategory, setSelectedCategory] = useState("Todos");
+    const [selectedCategory, setSelectedCategory] = useState("Todas");
+    const [selectedBrand, setSelectedBrand] = useState("Todas");
 
-    const filteredItems = selectedCategory === "Todos"
-        ? items
-        : items.filter(item => item.category === selectedCategory);
+    const filteredItems = items.filter(item => {
+        const categoryMatch = selectedCategory === "Todas" || item.category === selectedCategory;
+        const brandMatch = selectedBrand === "Todas" || item.company === selectedBrand;
+        return categoryMatch && brandMatch;
+    });
 
     return (
         <section className={cn("overflow-hidden py-28 lg:py-32", className)}>
@@ -94,66 +42,133 @@ export const Devices = ({
                         Todos nuestros equipos
                     </h2>
                     <p className="text-gray-300 max-w-xl leading-snug">
-                        FIltra por marca, tipo de equipo o aplicación para encontrar el dispositivo que mejor se adapte a las necesidades de tu consulta.
+                        Filtra por marca, tipo de equipo o aplicación para encontrar el dispositivo que mejor se adapte a las necesidades de tu consulta.
                     </p>
                     <Button variant="outline" className="shadow-md">
                         O contacta con nuestro equipo comercial <ArrowRight className="size-4" />
                     </Button>
                 </div>
 
-                {/* Filtros */}
-                <div className="mt-8 md:mt-12">
-                    <div className="flex flex-wrap gap-2 md:gap-3">
-                        {categories.map((category) => (
-                            <Button
-                                key={category}
-                                variant={selectedCategory === category ? "default" : "outline"}
-                                size="sm"
-                                onClick={() => setSelectedCategory(category)}
-                                className={cn(
-                                    "transition-all",
-                                    selectedCategory === category && "shadow-md"
-                                )}
-                            >
-                                {category}
+                {/* Filtros Desplegables */}
+                <div className="mt-8 md:mt-12 flex flex-wrap items-center gap-4">
+                    {/* Filtro de Categorías */}
+                    <DropdownMenu>
+                        <DropdownMenuTrigger asChild>
+                            <Button variant="outline" className="min-w-[160px] justify-between">
+                                <span className="text-muted-foreground text-sm font-normal">
+                                    Categoría:{" "}
+                                </span>
+                                <span className="ml-2 font-semibold">{selectedCategory}</span>
+                                <ChevronDown className="ml-2 size-4 opacity-50" />
                             </Button>
-                        ))}
+                        </DropdownMenuTrigger>
+                        <DropdownMenuContent align="start" className="w-[200px]">
+                            {categories.map((category) => (
+                                <DropdownMenuItem
+                                    key={category}
+                                    onClick={() => setSelectedCategory(category)}
+                                    className={cn(
+                                        "cursor-pointer",
+                                        selectedCategory === category && "bg-accent font-semibold"
+                                    )}
+                                >
+                                    {category}
+                                </DropdownMenuItem>
+                            ))}
+                        </DropdownMenuContent>
+                    </DropdownMenu>
+
+                    {/* Filtro de Marcas */}
+                    <DropdownMenu>
+                        <DropdownMenuTrigger asChild>
+                            <Button variant="outline" className="min-w-[160px] justify-between">
+                                <span className="text-muted-foreground text-sm font-normal">
+                                    Marca:{" "}
+                                </span>
+                                <span className="ml-2 font-semibold">{selectedBrand}</span>
+                                <ChevronDown className="ml-2 size-4 opacity-50" />
+                            </Button>
+                        </DropdownMenuTrigger>
+                        <DropdownMenuContent align="start" className="w-[200px]">
+                            {brands.map((brand) => (
+                                <DropdownMenuItem
+                                    key={brand}
+                                    onClick={() => setSelectedBrand(brand)}
+                                    className={cn(
+                                        "cursor-pointer",
+                                        selectedBrand === brand && "bg-accent font-semibold"
+                                    )}
+                                >
+                                    {brand}
+                                </DropdownMenuItem>
+                            ))}
+                        </DropdownMenuContent>
+                    </DropdownMenu>
+
+                    {/* Contador de resultados */}
+                    <div className="text-sm text-muted-foreground ml-auto">
+                        {filteredItems.length} de {items.length} equipos
                     </div>
                 </div>
 
                 {/* Grid de productos */}
-                <div className="mt-8 md:mt-12 lg:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 auto-rows-fr">
-                    {filteredItems.map((item, index) => (
-                        <Card
-                            key={index}
-                            className="bg-muted overflow-hidden border-none transition-transform hover:scale-105 flex flex-col"
-                        >
-                            <CardContent className="flex flex-col p-0 h-full">
-                                <div className="relative h-[288px] lg:h-[328px] flex-shrink-0">
-                                    <img
-                                        src={item.image}
-                                        alt={item.author}
-                                        className="size-full object-cover object-top"
-                                    />
-                                </div>
-                                <div className="flex flex-1 flex-col justify-between gap-6 p-6">
-                                    <blockquote className="font-display text-lg leading-none font-medium md:text-xl lg:text-2xl">
-                                        {item.quote}
-                                    </blockquote>
-                                    <div className="space-y-0.5">
-                                        <div className="text-foreground font-semibold">
-                                            {item.author}
-                                        </div>
-                                        <div className="text-muted-foreground text-sm">
-                                            {item.company}
+                <div className="mt-8 md:mt-12 lg:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                    {filteredItems.length > 0 ? (
+                        filteredItems.map((item, index) => (
+                            <Card
+                                key={index}
+                                className="bg-muted overflow-hidden border-none group cursor-pointer relative"
+                            >
+                                <CardContent className="flex h-full flex-col p-0">
+                                    <div className="relative h-[288px] lg:h-[328px]">
+                                        <img
+                                            src={item.image}
+                                            alt={item.author}
+                                            className="size-full object-cover object-top"
+                                        />
+                                    </div>
+                                    <div className="flex flex-1 flex-col justify-between gap-10 p-6">
+                                        <blockquote className="font-display text-lg leading-none! font-medium md:text-xl lg:text-2xl">
+                                            {item.quote}
+                                        </blockquote>
+                                        <div className="space-y-0.5">
+                                            <div className="text-foreground font-semibold">
+                                                {item.author}
+                                            </div>
+                                            <div className="text-muted-foreground text-sm">
+                                                {item.company}
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </CardContent>
-                        </Card>
-                    ))}
+                                </CardContent>
+                                <Button
+                                    variant="outline"
+                                    size="icon"
+                                    className="absolute bottom-6 right-6 size-10 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
+                                >
+                                    <ArrowRight className="size-5" />
+                                </Button>
+                            </Card>
+                        ))
+                    ) : (
+                        <div className="col-span-full text-center py-12">
+                            <p className="text-muted-foreground text-lg">
+                                No se encontraron equipos con los filtros seleccionados.
+                            </p>
+                            <Button
+                                variant="outline"
+                                className="mt-4"
+                                onClick={() => {
+                                    setSelectedCategory("Todas");
+                                    setSelectedBrand("Todas");
+                                }}
+                            >
+                                Limpiar filtros
+                            </Button>
+                        </div>
+                    )}
                 </div>
             </div>
         </section>
     );
-};
+}
