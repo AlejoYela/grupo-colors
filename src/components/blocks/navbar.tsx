@@ -45,22 +45,22 @@ const ITEMS = [
     dropdownItems: [
       {
         title: "Equipos de Oftalmología",
-        href: "/pricing",
+        href: "/allproducts?categoria=Oftalmología",
         description: "Multidiagnósticos, OCT, ARK, Cámaras retinales, Lámparas de hendidura, Dry eye, Láser...",
       },
       {
         title: "Equipos de Optometría",
-        href: "/pricing",
+        href: "/allproducts?categoria=Optometría",
         description: "Forópter, Lensómetros, Sistemas de agudeza visual, Unidades de refracción, Cajas de pruebas...",
       },
       {
         title: "Equipos de Laboratorio",
-        href: "/pricing",
+        href: "/allproducts?categoria=Laboratorio",
         description: "Biseladoras, Trazadoras, Calentadores de monturas, Uveómetros...",
       },
       {
         title: "Monturas",
-        href: "/pricing",
+        href: "/allproducts?categoria=Monturas",
         description: "Frida Khalo, Paul Frank, Perry Ellis, New Balance, Nano, Lancetti...",
       },
     ]

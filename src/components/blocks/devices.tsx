@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { ArrowRight, ChevronDown } from "lucide-react";
 
@@ -17,8 +17,20 @@ import { cn } from "@/lib/utils";
 
 const items = productsData;
 
-const categories = ["Todas", "Refracción", "Diagnóstico", "Imaging", "Laboratorio"];
-const brands = ["Todas", "Visionix", "Optopol", "PlenOptika", "Keeler", "MicroClear", "SMB"];
+const categories = ["Todas", "Refracción", "Diagnóstico", "Imaging", "Laboratorio", "Oftalmología", "Optometría", "Monturas"];
+const brands = ["Todas", "Visionix", "REVO", "Optopol", "PlenOptika", "Keeler", "MicroClear", "SBM", "IDRA", "KHL", "Colors Instruments", "Vantage", "All Pupil", "Evidence", "ViewLight", "Icare", "Volk", "ClearPods", "Nun", "VistaView", "Sonomed", "66 Vision", "Essilor", "MiiS"];
+
+// Mapeo de títulos personalizados por categoría
+const categoryTitles = {
+    "Todas": "Todos nuestros equipos",
+    "Refracción": "Equipos de Refracción",
+    "Diagnóstico": "Equipos de Diagnóstico",
+    "Imaging": "Equipos de Imaging",
+    "Laboratorio": "Equipos de Laboratorio",
+    "Oftalmología": "Equipos de Oftalmología",
+    "Optometría": "Equipos de Optometría",
+    "Monturas": "Monturas originales",
+};
 
 export const Devices = ({
     className,
@@ -28,18 +40,60 @@ export const Devices = ({
     const [selectedCategory, setSelectedCategory] = useState("Todas");
     const [selectedBrand, setSelectedBrand] = useState("Todas");
 
+    // Leer parámetros de la URL al cargar el componente
+    useEffect(() => {
+        const params = new URLSearchParams(window.location.search);
+        const categoryParam = params.get('categoria');
+        const brandParam = params.get('marca');
+
+        if (categoryParam && categories.includes(categoryParam)) {
+            setSelectedCategory(categoryParam);
+        }
+        if (brandParam && brands.includes(brandParam)) {
+            setSelectedBrand(brandParam);
+        }
+    }, []);
+
+    // Actualizar la URL cuando cambian los filtros
+    const updateURL = (category: string, brand: string) => {
+        const params = new URLSearchParams();
+        if (category !== "Todas") params.set('categoria', category);
+        if (brand !== "Todas") params.set('marca', brand);
+
+        const newURL = params.toString()
+            ? `${window.location.pathname}?${params.toString()}`
+            : window.location.pathname;
+
+        window.history.pushState({}, '', newURL);
+    };
+
+    const handleCategoryChange = (category: string) => {
+        setSelectedCategory(category);
+        updateURL(category, selectedBrand);
+    };
+
+    const handleBrandChange = (brand: string) => {
+        setSelectedBrand(brand);
+        updateURL(selectedCategory, brand);
+    };
+
     const filteredItems = items.filter(item => {
-        const categoryMatch = selectedCategory === "Todas" || item.category === selectedCategory;
+        // Manejar tanto string como array para compatibilidad
+        const itemCategories = Array.isArray(item.category) ? item.category : [item.category];
+        const categoryMatch = selectedCategory === "Todas" || itemCategories.includes(selectedCategory);
         const brandMatch = selectedBrand === "Todas" || item.company === selectedBrand;
         return categoryMatch && brandMatch;
     });
+
+    // Obtener el título dinámico basado en la categoría seleccionada
+    const pageTitle = categoryTitles[selectedCategory] || "Todos nuestros equipos";
 
     return (
         <section className={cn("overflow-hidden py-28 lg:py-32", className)}>
             <div className="container">
                 <div className="space-y-4">
                     <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl" id="stars-products">
-                        Todos nuestros equipos
+                        {pageTitle}
                     </h2>
                     <p className="text-gray-300 max-w-xl leading-snug">
                         Filtra por marca, tipo de equipo o aplicación para encontrar el dispositivo que mejor se adapte a las necesidades de tu consulta.
@@ -66,7 +120,7 @@ export const Devices = ({
                             {categories.map((category) => (
                                 <DropdownMenuItem
                                     key={category}
-                                    onClick={() => setSelectedCategory(category)}
+                                    onClick={() => handleCategoryChange(category)}
                                     className={cn(
                                         "cursor-pointer",
                                         selectedCategory === category && "bg-accent font-semibold"
@@ -93,7 +147,7 @@ export const Devices = ({
                             {brands.map((brand) => (
                                 <DropdownMenuItem
                                     key={brand}
-                                    onClick={() => setSelectedBrand(brand)}
+                                    onClick={() => handleBrandChange(brand)}
                                     className={cn(
                                         "cursor-pointer",
                                         selectedBrand === brand && "bg-accent font-semibold"
@@ -159,8 +213,8 @@ export const Devices = ({
                                 variant="outline"
                                 className="mt-4"
                                 onClick={() => {
-                                    setSelectedCategory("Todas");
-                                    setSelectedBrand("Todas");
+                                    handleCategoryChange("Todas");
+                                    handleBrandChange("Todas");
                                 }}
                             >
                                 Limpiar filtros
