@@ -1,0 +1,15 @@
+---
+import DefaultLayout from '../layouts/DefaultLayout.astro';
+
+import { Background } from '@/components/background';
+import { Devices } from '@/components/blocks/devices';
+
+---
+
+
+<DefaultLayout title="All products" description="All devices and search filters.">
+    <Background>
+   
+    <Devices client:only='react'/>
+    </Background>
+</DefaultLayout>
