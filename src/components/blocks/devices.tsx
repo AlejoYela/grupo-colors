@@ -32,6 +32,18 @@ const categoryTitles = {
     "Monturas": "Monturas originales",
 };
 
+//Mapeo de descripciones personalizadas por categoría
+const categoryDescriptions = {
+    "Todas": "Filtra por marca, tipo de equipo o aplicación para encontrar el dispositivo que mejor se adapte a las necesidades de tu consulta.",
+    "Refracción": "Descubre nuestra selección de equipos de refracción de última generación, diseñados para ofrecer mediciones precisas y mejorar la experiencia del paciente en tu consulta.",
+    "Diagnóstico": "Explora nuestros avanzados equipos de diagnóstico oftalmológico, desde OCT hasta cámaras retinales, para un análisis detallado y preciso de la salud ocular.",
+    "Imaging": "Conoce nuestros equipos de imaging, que ofrecen soluciones innovadoras para la captura y análisis de imágenes oculares.",
+    "Laboratorio": "Descubre nuestra gama de equipos de laboratorio, diseñados para facilitar el trabajo en el laboratorio y mejorar la eficiencia en los diagnósticos.",
+    "Oftalmología": "Explora nuestros equipos especializados en oftalmología, que brindan soluciones integrales para el cuidado de la salud ocular.",
+    "Optometría": "Conoce nuestros equipos de optometría, que ofrecen tecnología avanzada para exámenes visuales y diagnóstico.",
+    "Monturas": "Descubre nuestras monturas originales, que combinan estilo y comodidad para tus pacientes.",
+}
+
 export const Devices = ({
     className,
 }: {
@@ -87,6 +99,7 @@ export const Devices = ({
 
     // Obtener el título dinámico basado en la categoría seleccionada
     const pageTitle = categoryTitles[selectedCategory] || "Todos nuestros equipos";
+    const pageDescription = categoryDescriptions[selectedCategory] || "Filtra por marca, tipo de equipo o aplicación para encontrar el dispositivo que mejor se adapte a las necesidades de tu consulta.";
 
     return (
         <section className={cn("overflow-hidden py-28 lg:py-32", className)}>
@@ -96,7 +109,7 @@ export const Devices = ({
                         {pageTitle}
                     </h2>
                     <p className="text-gray-300 max-w-xl leading-snug">
-                        Filtra por marca, tipo de equipo o aplicación para encontrar el dispositivo que mejor se adapte a las necesidades de tu consulta.
+                        {pageDescription}
                     </p>
                     <Button variant="outline" className="shadow-md">
                         O contacta con nuestro equipo comercial <ArrowRight className="size-4" />
